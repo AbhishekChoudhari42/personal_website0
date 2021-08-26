@@ -267,7 +267,7 @@ body{
 
     }
     100%{
-        transform: translateY(2rem);
+        transform: translateY(-2rem);
     }
 }
 .scroll-icon h5{
