@@ -14,20 +14,18 @@ menu.addEventListener('click',function(){
     
     console.log('cancel')
 })
-// background-graphic
 
-// auto-scroll
+
 
 // page-transition
 
-// contact-form-submission
+
+//background-graphic 
 
 let canvasHeight = window.innerHeight;
 let canvasWidth = window.innerWidth;
     
-// window.onresize = function(){
-//    location.reload()
-// }
+
 function map(point,low,high,low2,high2){
     
     p = (high2 - low2) * (point/(high-low));
@@ -39,7 +37,7 @@ let sec = document.querySelector('section')
 
 
 
-let angle = 0.1
+let angle = 0
 
 
 function setup(){
@@ -47,25 +45,22 @@ function setup(){
     createCanvas(canvasWidth,canvasHeight,WEBGL);
     frameRate(30)
 }
-let size = 150
+
+let sphereWidth = canvasWidth>500?canvasWidth*0.4:canvasWidth*0.4
+let size;
+
 function draw(){
-    // translate(canvasWidth/2,0)
-    size = (150 + window.pageYOffset)>1500?1500:150 + window.pageYOffset/5
+    size = (sphereWidth + window.pageYOffset)>1500?1500:sphereWidth + window.pageYOffset/5
     background(10,10,10)
-    // stroke(150 + cos(angle)*105,0,100 + sin(angle)*155)
-    // stroke((cos(angle)*cos(angle))*255,0,sin(angle)*sin(angle)*255)
+
     stroke(250,0,0)
-    // strokeWeight(2)
     fill(0,0,0,0)
-   
-    // let rX = mouseX*(angle/5000) + 0.005
-    // let rY = mouseY*(angle/5000) + 0.005
+
     let rX = (angle) + 0.005
     let rY = (angle) + 0.005
     rotateX(rY/2)
     rotateY(rX/2)
     sphere(size) 
-    // box(size)
     angle+=0.01
 
 }

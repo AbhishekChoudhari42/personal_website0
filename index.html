@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.5/css/unicons.css">
     <script src="./p5.min.js"></script>
+
 </head>
 <body>
 
@@ -38,7 +39,7 @@
         <div class="sec1">
             <h1>ABHISHEK CHOUDHARI</h1>
             <h4>FRONTEND DEVELOPER</h4>
-            <h2>CONTACT NOW<i class="uil uil-angle-right-b"></i></h2>
+            <h2><a href="#contact-now">CONTACT NOW</a> <i class="uil uil-angle-right-b"></i></h2>
         </div>
         <div class="bottom-icons">
             <div class="contact-icon"><h3><i class="uil uil-instagram"></i><i class="uil uil-github"></i></h3></div>
@@ -51,7 +52,7 @@
     </section>
 
     <section class="about-section">
-        <h1 class="title" data-text="About">About</h1>
+        <h1 class="title" data-text="ABOUT">ABOUT</h1>
         <div class="about-info">
             <div class="sub-title">
                 <p>I am an undergraduate student , studying
@@ -61,18 +62,12 @@
                     Technology</span> to <span>Virtual Reality and Design</span>. I love to
                     read books on a wide variety of topics and I am
                     good at comprehending difficult concepts </p>
-                    <!-- <p>I am an undergraduate student , studying
-                        <span>Computer Science at Fergusson College</span> ,Pune. I
-                         am interested in learning about many things
-                         ranging from  <span>Artificial Intelligence, Web
-                         Technology</span> to <span>Virtual Reality and Design</span>. I love to
-                         read books on a wide variety of topics and I am
-                         good at comprehending difficult concepts </p> -->
+                   
     
             </div>
-            <!-- <div class="about-image">
-         
-            </div> -->
+            <div class="resume">
+                <a href="./Abhishek_Choudhari_resume.pdf">Resume</a>
+            </div>
         </div>
        
         
@@ -80,12 +75,18 @@
 <section class="skills">
    <h1 class="title"data-text="SKILLS" >SKILLS</h1>
     <div class="skills-grid">
-        <div class="grid-items"> </div>
+        <h3>HTML</h3>
+        <h3>CSS</h3>
+        <h3>JAVASCRIPT</h3>
+        <h3>JQUERY</h3>
+        <h3>PYTHON</h3>
+        <h3>C</h3>
+        <!-- <div class="grid-items"> </div>
         <div class="grid-items"></div>
         <div class="grid-items"></div>
         <div class="grid-items"></div>
         <div class="grid-items"></div>
-        <div class="grid-items"></div>
+        <div class="grid-items"></div> -->
     </div>
    
    
@@ -107,7 +108,7 @@
     </div>
 </section>
 
-<section class="contacts">
+<section id="contact-now" class="contacts">
     <h1 class="title" data-text="CONTACTS">
         CONTACTS
 
@@ -119,14 +120,31 @@
             <h3><i class="uil uil-envelope"></i>choudhariabhishek93@gmail.com</h3>
             <!-- <h3>144,Ghorpade Peth,Pune 42</h3> -->
         </div>
-        <div class="contact-form">
+
+        <!-- action="https://getform.io/f/0c514f12-9116-49cc-93a1-6184dc438769" -->
+
+        <form class="contact-form"  method="POST">
+            <h4>Name</h4>
+            <input type="text" name="name">
             <h4>Email</h4>
-            <input type="email" name="" id="">
+            <input type="email" name="email">
             <h4>Message</h4>
-            <input type="text">
-            <button class="send-message">SEND MESSAGE<i class="uil uil-message"></i></button>
+            <input type="text" name="message">
+            <button class="send-message" type="submit">SEND MESSAGE<i class="uil uil-message"></i></button>
+        </form>
+
+
+
+
+
+      
+
+            
+            <!-- <input type="email" name="" id=""> -->
+            <!-- <input type="text">
+            <button ></button> -->
             <!-- <input  type="button" value="SEND MESSAGE"><i class="uil uil-pen"></i></input> -->
-        </div>
+    
     </div>
     <footer>
         <i class="uil uil-pen"></i>Designed and Developed by <span>Abhishek Choudhari</span>
