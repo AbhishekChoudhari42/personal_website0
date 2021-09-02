@@ -529,7 +529,7 @@ background-color: red;
 }
 /* ==================== contacts-section ==================== */
 .contacts{
-height: 100vh;
+height: calc(100vh - 32px);
 width: 100%;
 padding: 2rem 2rem;
 position: relative;
@@ -539,15 +539,38 @@ background: rgba(0, 0, 0, 0.178);
     width: 100%;
     height: 70vh;
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 2rem;
+  
+    /* backdrop-filter: blur(2px) brightness(1.2); */
 
 }
 .contacts .contact-space h3{
     color: white;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
+    margin: 1rem 0rem;
+
+    font-size: 1rem;
     font-weight: 500;
+    /* background-color: turquoise; */
+}
+.conact-info{
+
+    /* background-color: violet; */
+    width: 100%;
+   max-width: 500px;
+  
+}
+.conact-info h3{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+   
+}
+.conact-info i{
+    font-size: 1.5rem;
+    font-weight: lighter;
 }
 .contacts .contact-space h4{
     color: white;
@@ -560,12 +583,13 @@ background: rgba(0, 0, 0, 0.178);
     justify-content: center;
     align-items: left;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 3rem;
+    background-color: rgba(32, 32, 32, 0.199);
+    border-radius: 1rem;
     width: 100%;
-    height: 50vh;
-    padding: 0rem 0.2rem;
-    /* backdrop-filter: blur(2px); */
+    max-width: 500px;
+    height: fit-content;
+    padding: 1rem 1rem;
+    backdrop-filter: blur(2px);
 
 }
 .contact-form input{
@@ -574,9 +598,15 @@ background: rgba(0, 0, 0, 0.178);
     outline: none;
     padding: 1rem;
     font-size: 1rem;
-    background: rgb(27, 27, 27);
+    background: rgb(31, 31, 31);
     color: white;
     border-radius: 0.5rem;
+    height: fit-content;
+}
+
+.contact-form input:focus{
+    border-bottom: 2px solid rgb(255, 255, 255);
+    word-break:break-word;
 }
 
 .send-message{
@@ -604,11 +634,9 @@ background: rgba(0, 0, 0, 0.178);
 
 /* =======================footer=================== */
 footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+
     width: 100%;
-    height: 20px;
+    height: 16px;
     background: red;
     font-size: 0.8rem;
     color: white;
