@@ -11,4 +11,7 @@
     .contacts .contact-space h3{
         font-size: 1.2rem;
     }
+    .project-list{
+        flex-direction: row;
+    }
 }

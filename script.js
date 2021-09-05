@@ -1,18 +1,25 @@
 
-// menu-toggle
-var menu = document.querySelector('.menu');
-// var menulist = document.querySelector('.menulist')
-// var sec = document.querySelector('section')
 
-// console.log(menu)
+var menu = document.querySelector('.menu');
+var menuSlide = document.querySelector('.menu-slide');
+var slide = document.querySelectorAll('.slide');
+var slideInfo= document.querySelector('.slide-info');
+
+
+
 menu.addEventListener('click',function(){
-    menu.classList.toggle('cancel')
-    // menulist.classList.toggle('slidedown')
-    // document.body.classList.toggle('disable');
-    // sec.classList.toggle('disable')
+    menuSlide.classList.toggle('open')
+    menu.classList.toggle('cancel');
+    slideInfo.classList.toggle('show')
+
+    slide.forEach(element => {
+        element.classList.toggle('open')
+    });
+   
+
     
     
-    console.log('cancel')
+    
 })
 
 
@@ -46,7 +53,7 @@ function setup(){
     frameRate(30)
 }
 
-let sphereWidth = canvasWidth>500?canvasWidth*0.4:canvasWidth*0.4
+let sphereWidth = canvasWidth>500?canvasWidth*0.15:canvasWidth*0.4
 let size;
 
 function draw(){
