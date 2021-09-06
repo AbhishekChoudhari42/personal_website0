@@ -31,10 +31,9 @@ body{
     overflow-x: none;
    
     font-family: 'Montserrat', sans-serif;
+    
    
-    /* font-family: 'montserrat'; */
-    /* font-family: 'Roboto', sans-serif; */
-    /* text-align: center; */
+   
  
     
 
@@ -57,7 +56,7 @@ body{
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0);
-    z-index: 100;
+   
     transform: translateY(-100%);
     transition: 2s cubic-bezier(0.39, 0.575, 0.565, 1);
    
@@ -71,37 +70,59 @@ transform: translateY(0%);
 
 .slide{
 flex: 1;
+position: fixed;
+z-index: 500;
+top: 0;
+left: 0;
 transform: translateY(-100%);
 background: rgb(255, 0, 0);
+width: calc(33.33vw);
 height: 100vh;
 transition: 1s;
-
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356),-2px 2px 5px rgba(0, 0, 0, 0.39);
 }
-.slide.open{
+
+.slide.open1{
     transform: translateY(0%);
     background: rgb(0, 0, 0);
 
 }
 #slide1{
     transition-delay: 0s;
+   
 }
 #slide2{
-    transition-delay: 0.75s;
-
+    transition-delay: 0.5s;
+    left: 33.33vw;
 }
 #slide3{
-    transition-delay: 1.5s;
-    
+    transition-delay: 1s;
+    left: 66.66vw;
 
 }
 .slide-info{
-    position: absolute;
+
+    position: fixed;
+    /* background:blue; */
+    width: 100vw;
+    height: fit-content;
+    top: 20%;
+    left: 0%;
+    transform: translateY(-150%);
+
     display: flex;
-    justify-content: space-around;
+  /* opacity: 0; */
     align-items: center;
     flex-direction: column;
+    z-index: 510;
+    transition: 1.5s;
     
 }
+/* .slide-info a:nth-child(1){
+    margin-top: 50%;
+
+} */
+
 .slide-info a{
     text-decoration: none;
     font-size: 2rem;
@@ -110,14 +131,18 @@ transition: 1s;
     color: white;
     opacity: 1;
     transition: 0.5s;
+    transition-delay: 0.5s;
 
 }
 .slide-info.show{
     opacity: 1;
+    transform: translateY(0%);
+    
+
 }
 /* ==================== navigation ==================== */
 .navigation-bar{
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
 
@@ -129,10 +154,11 @@ transition: 1s;
     height: var(--nav-height);
     padding:40px 2rem;
     margin: 0;
-    background-color: rgba(0, 0, 0, 0.212);
+    background-color: rgba(53, 53, 53, 0.233);
     backdrop-filter: blur(5px);
-    box-shadow: 0px 2px 10px  rgba(0, 0, 0, 0.329);
+    box-shadow: 0px 20px 20px  rgba(0, 0, 0, 0.329);
     z-index: 600;
+    transition: 0.5s;
 
 
 
@@ -204,7 +230,8 @@ transition: 1s;
 }
 .menu.cancel .m2{
    
-   transform:rotate(-90deg) ;
+   transform:rotate(-45deg) ;
+   width: 2px;
    opacity: 0;
     
 }
@@ -252,8 +279,8 @@ transition: 1s;
 .hero-section{
     position: relative;
     color: white;
-    background-color: rgba(0, 0, 0, 0.418);
-    height:calc(100vh - 50px);
+    /* background-color: rgba(0, 0, 0, 0.418); */
+    height:100vh;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -264,7 +291,7 @@ transition: 1s;
     bottom: 0;
     color: white;
     margin: 0 4rem;
- height:60vh;
+    height:60vh;
     width: calc(100% - 4rem);
     background-color: rgba(0, 0, 0, 0);
     display: flex;
@@ -276,7 +303,7 @@ transition: 1s;
 .sec1 h1{
     font-size: 2.5rem;
     line-height: 2.5rem;
-    font-weight: 500;
+    font-weight: 900;
     font-style: italic;
 }
 
@@ -285,61 +312,49 @@ transition: 1s;
     
     font-size: 0.8rem;
     margin:5px 0;
-    letter-spacing: 10px;
-    /* background-color: rgba(255, 0, 0, 0.486); */
+    letter-spacing: 5px;
     padding: 5px;
-    font-weight: 600;
+    font-weight: 500;
+    /* background-color: rgb(250, 250, 250); */
+    color: rgb(255, 255, 255);
 }
-.sec1 h4::before{
-    content: '.';
-    position: absolute;
-    top: -160%;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: -1;
-}
+
 .sec1 h2{
     position: relative;
     display: inline-block;
     background-color: red;
     color:white;
-    /* color: transparent; */
     font-weight: 700;
     padding: 5px 10px;
     line-height: 2rem;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     transition: 0.5s;
     cursor: pointer;
-   width: fit-content;
-
-
+    width: fit-content;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.192),-5px -5px 10px rgba(0, 0, 0, 0.151);
     margin: 5px 0;
-   transition: 1s;
+    transition: 1s;
 
 
 }
 .sec1 h2 a{
     color:white;
     text-decoration: none;
+
     
 }
 
 .sec1 h2:hover{
-    /* background-color: rgb(255, 255, 255); */
-    /* color: red; */
-   transition: 0.5s;
- box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.363),-5px -5px 10px rgba(255, 0, 0, 0.363);
+ 
+    transition: 0.5s;
+    box-shadow: 5px 5px 10px rgba(255, 0, 0, 0.363),-5px -5px 10px rgba(255, 0, 0, 0.363);
 
 }
 .sec1 h2:hover .uil-angle-right-b{
   
- 
-
-
-
-   font-weight: bolder;
+    font-weight: bolder;
 }
 
 
@@ -385,7 +400,26 @@ letter-spacing: 5px;
     
     
 }
-
+.social-icons{
+    position: absolute;
+    height: 8vh;
+    top: 80%;
+    left: 2rem;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+    color: rgb(126, 126, 126);
+}
+.social-icons a{
+    text-decoration: none;
+    color: white;
+}
+.social-icons a:hover{
+    color: red;
+}
 .scroll-to-top{
     position: fixed;
     bottom: 2rem;
@@ -396,11 +430,13 @@ letter-spacing: 5px;
     align-items: center;
     padding: 0;
     z-index: 500;
+    transition: 0.5s;
 
 
 }
 
 .scroll-to-top a {
+    opacity: 0;
     text-decoration: none;
     color: white;
 }
@@ -424,6 +460,8 @@ letter-spacing: 5px;
     color: red;
 
 }
+
+
 
 /* ==================== about-section ==================== */
 .about-section{
@@ -473,19 +511,23 @@ letter-spacing: 5px;
     flex: 1;
 
 
-    font-size: 1.5rem;
- 
+    font-size: 1.2rem;
+  
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* flex-direction: column; */
+    padding: 1rem 0;
     transition: ease 0.5s;
+   
 
 }
-
+.resume{
+    margin-top: 2rem;
+}
 
 .resume a{
     font-size: 1.2rem;
+
     
     color: red;
     background:white;
@@ -548,46 +590,65 @@ display:grid;
 grid-template-columns: repeat(auto-fill,minmax(200px,3fr));
 
 place-items: center;
-grid-gap: 1rem;
+grid-gap:1rem;
 
 }
 
-h3{
-    font-size: 2rem;
-    color: white;
-}
-.grid-items::before{
-    
-    content:'';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    /* background-color: red; */
-    background-image: url('./bg.png');
-    background-size: cover;
-    background-position: center;
-    border: 3px solid rgb(70, 70, 70);
 
-    top: 3px;
-    left: 3px;
-    z-index: -1;
+
+
+.skills-grid img{
+    width: 150px;
+    height: 150px;
+background-position: center;
+background-size: cover;
+font-size: 0.8rem;
+text-align: center;
+color: transparent;
+}
+
+.skills-grid img:nth-child(1){
+    --html-shadow:rgba(240, 101, 41, 0.2);
+     box-shadow:2px 2px 10px var(--html-shadow) ,
+    -2px -2px 10px var(--html-shadow),
+    2px -2px 10px var(--html-shadow),
+    -2px 2px 10px var(--html-shadow);
+
+
 
 }
-.skills-grid .grid-items{
-    position: relative;
-    color: white;
-    background-color:rgba(255, 255, 255, 0) ;
-    border: 3px solid red;
+.skills-grid img:nth-child(2){
+    --css-shadow:rgba(0, 132, 255, 0.2);
+     box-shadow:2px 2px 10px var(--css-shadow) ,
+    -2px -2px 10px var(--css-shadow),
+    2px -2px 10px var(--css-shadow),
+    -2px 2px 10px var(--css-shadow);
 
-    width: 120px;
-    height: 120px;
-    /* min-width: fit-content; */
-    display: grid;
-    grid-gap: 1rem;
-    place-items: center;
-    /* padding: 1rem; */
-    z-index:2;
+
+
 }
+.skills-grid img:nth-child(3){
+    --js-shadow:rgba(255, 251, 0, 0.2);
+     box-shadow:2px 2px 10px var(--js-shadow) ,
+    -2px -2px 10px var(--js-shadow),
+    2px -2px 10px var(--js-shadow),
+    -2px 2px 10px var(--js-shadow);
+
+
+
+}
+.skills-grid img:nth-child(4){
+    --jq-shadow:rgba(255, 255, 255, 0.2);
+     box-shadow:2px 2px 10px var(--jq-shadow) ,
+    -2px -2px 10px var(--jq-shadow),
+    2px -2px 10px var(--jq-shadow),
+    -2px 2px 10px var(--jq-shadow);
+
+
+
+}
+
+
 
 /* ==================== projects-section ==================== */
 
@@ -839,7 +900,8 @@ background: rgba(0, 0, 0, 0.178);
 
 /* =======================footer=================== */
 footer{
-
+    position: absolute;
+    bottom: 0;
     width: 100%;
     height: 16px;
     background: red;

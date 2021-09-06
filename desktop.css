@@ -14,5 +14,9 @@
     .project-list{
         flex-direction: row;
     }
-    
+    .sec1 h4{
+       
+        letter-spacing: 10px;
+       
+    }
 }
