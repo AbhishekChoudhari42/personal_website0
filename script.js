@@ -59,6 +59,7 @@ infoLink.forEach(element => {
 // scroll
 
 var scrollToTop = document.querySelector('.scroll-to-top a');
+var sect = document.querySelector('section');
 
 var lastscroll = 0;
 var navbar = document.querySelector('.navigation-bar');
@@ -71,7 +72,7 @@ window.addEventListener('scroll',function(){
     var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     scrollToTop.style.opacity = (scrollTop > 1000)?1:0
     
-
+    sect.style.transform = `shearY(5deg)`
 
     if(scrollTop > lastscroll){
         navbar.style.top = '-100%'
